@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mundo Manual! — Bem-vindo</title>
+  <meta name="description" content="Oficina Mundo Manual! — atividades manuais para crianças com materiais simples. Tutoriais em vídeo, dobraduras, colagens e recortes."/>
+  <style>
+    /* Reset simples */
+    :root{
+      --accent:#FF8A65;
+      --accent-dark:#FF7043;
+      --bg:#FFF9F6;
+      --card:#FFFFFF;
+      --text:#333;
+      --muted:#666;
+      --radius:14px;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#fff);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.4;
+    }
+
+    header{
+      background:transparent;
+      padding:18px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      position:sticky;
+      top:0;
+      backdrop-filter: blur(6px);
+      z-index:10;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:var(--text);
+    }
+    .logo{
+      width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+      display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.09);
+    }
+    nav{display:flex;gap:12px;align-items:center}
+    a.btn, button.btn{
+      background:var(--accent);
+      color:white;padding:10px 14px;border-radius:10px;border:0;text-decoration:none;
+      font-weight:600;cursor:pointer;
+    }
+    a.link{
+      color:var(--muted);text-decoration:none;padding:8px;border-radius:8px;
+    }
+    main{padding:28px 20px;max-width:1100px;margin:0 auto}
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:26px;
+      align-items:center;
+      margin-bottom:28px;
+    }
+    @media (max-width:880px){ .hero{grid-template-columns:1fr} .hero-right{order:-1} }
+
+    .card{
+      background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:0 6px 18px rgba(0,0,0,.06);
+    }
+    h1{margin:0;font-size:28px}
+    p.lead{color:var(--muted);font-size:16px}
+
+    .features{
+      display:flex;gap:14px;margin-top:16px;flex-wrap:wrap;
+    }
+    .feature{
+      flex:1 1 160px;padding:12px;border-radius:12px;background:linear-gradient(180deg,#fff,#fff);
+      border:1px dashed rgba(0,0,0,.04);
+    }
+    .videos-grid{
+      display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:12px;
+    }
+
+    /* Contact */
+    form {display:grid;gap:10px}
+    label{font-size:13px;color:var(--muted)}
+    input[type="text"], input[type="email"], textarea{
+      padding:10px;border-radius:10px;border:1px solid #eee;font-size:14px;
+      width:100%;
+    }
+    textarea{min-height:120px;resize:vertical}
+    .row{display:flex;gap:10px}
+    .small{flex:1}
+
+    footer{margin-top:28px;padding:20px 0;color:var(--muted);text-align:center;font-size:14px}
+    .map{
+      width:100%;height:220px;border-radius:12px;border:1px solid #eee;overflow:hidden;
+      background:linear-gradient(90deg,#FAF3EF,#FFF);
+      display:flex;align-items:center;justify-content:center;color:var(--muted);
+    }
+
+    /* playful touches */
+    .kid-emoji{font-size:34px;margin-right:8px}
+    .cta-row{display:flex;gap:12px;align-items:center;margin-top:12px}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="#">
+      <div class="logo" aria-hidden="true">MM</div>
+      <div>
+        <div style="font-weight:700">Mundo Manual!</div>
+        <div style="font-size:12px;color:var(--muted)">Aprender criando</div>
+      </div>
+    </a>
+
+    <nav aria-label="Menu principal">
+      <a class="link" href="#about">Sobre</a>
+      <a class="link" href="#videos">Vídeos</a>
+      <a class="link" href="#contato">Contato</a>
+      <a class="btn" href="#contato">Participe</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="card">
+        <h1><span class="kid-emoji" aria-hidden="true">🎨</span>Bem-vindo ao Mundo Manual!</h1>
+        <p class="lead">Um espaço para crianças descobrirem a criatividade com materiais simples que temos em casa. Tutoriais em vídeo, atividades de dobradura, colagem e recorte — tudo feito para aprender brincando.</p>
+
+        <div class="features" role="list">
+          <div class="feature" role="listitem">
+            <strong>Coordenação motora</strong>
+            <div style="font-size:13px;color:var(--muted)">Atividades que estimulam precisão e controle.</div>
+          </div>
+          <div class="feature" role="listitem">
+            <strong>Material simples</strong>
+            <div style="font-size:13px;color:var(--muted)">Usamos papel, cola, tesoura e materiais recicláveis.</div>
+          </div>
+          <div class="feature" role="listitem">
+            <strong>Trabalho em grupo</strong>
+            <div style="font-size:13px;color:var(--muted)">Projetos para fazer em dupla ou em roda.</div>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn" href="#videos">Ver Tutoriais</a>
+          <a class="link" href="#contato">Fale Conosco</a>
+        </div>
+      </div>
+
+      <aside class="card hero-right" aria-label="Destaque">
+        <h3 style="margin-top:0">O que faremos aqui</h3>
+        <p style="margin:0;color:var(--muted)">Durante a oficina, as crianças farão experiências com dobraduras, colagens e recortes — atividades pensadas para melhorar a articulação de movimentos, precisão corporal e cooperação.</p>
+
+        <div style="margin-top:12px">
+          <strong>Exemplos:</strong>
+          <ul style="margin:8px 0 0 18px;color:var(--muted);padding:0">
+            <li>Animais de papel (origami simples)</li>
+            <li>Brinquedos reciclados (carros, bonecos)</li>
+            <li>Colagens criativas e murais em grupo</li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+
+    <section id="videos" class="card" aria-labelledby="videos-title" style="margin-bottom:18px">
+      <h2 id="videos-title">Vídeos passo a passo</h2>
+      <p class="lead" style="margin-top:6px">Tutoriais curtos com instruções claras para acompanhar com as mãos. Ideal para crianças e responsáveis.</p>
+
+      <div class="videos-grid" aria-hidden="false">
+        <!-- placeholders: substitua os iframes pelos seus links de vídeo reais -->
+        <div class="card">
+          <h4>Carro de rolinho</h4>
+          <div style="margin-top:8px">
+            <iframe width="100%" height="160" src="https://www.youtube.com/embed/?listType=search&list=carro+de+rolinho" title="Vídeo tutorial" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>Bichinho de dobradura</h4>
+          <div style="margin-top:8px">
+            <iframe width="100%" height="160" src="https://www.youtube.com/embed/?listType=search&list=origami+para+criancas" title="Vídeo tutorial" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>Mural coletivo</h4>
+          <div style="margin-top:8px">
+            <iframe width="100%" height="160" src="https://www.youtube.com/embed/?listType=search&list=mural+de+colagem+crianca" title="Vídeo tutorial" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="card" style="margin-bottom:18px">
+      <h2>Sobre a oficina</h2>
+      <p style="color:var(--muted)">A oficina <strong>Mundo Manual!</strong> tem como objetivo estimular o desenvolvimento da coordenação motora por meio da construção de pequenos objetos com materiais simples e acessíveis. Durante a oficina, os participantes são convidados a vivenciar atividades que estimulam a articulação de movimentos e a criatividade.</p>
+      <p style="color:var(--muted)">As atividades têm foco no aprimoramento da coordenação motora, precisão corporal e esforço em grupo — por meio de dobraduras, colagens e recortes.</p>
+    </section>
+
+    <section id="contato" class="card" aria-labelledby="contato-title">
+      <h2 id="contato-title">Localização e Contato</h2>
+      <p class="lead">Quer participar ou tirar dúvidas? Entre em contato conosco — adoraríamos ouvir você!</p>
+
+      <div style="display:grid;grid-template-columns:1fr 340px;gap:16px;margin-top:12px">
+        <div>
+          <form id="contactForm" onsubmit="return submitContact(event)" novalidate>
+            <div class="row">
+              <div class="small">
+                <label for="nome">Nome</label>
+                <input id="nome" name="nome" type="text" required placeholder="Seu nome" aria-required="true">
+              </div>
+              <div class="small">
+                <label for="telefone">Telefone</label>
+                <input id="telefone" name="telefone" type="text" placeholder="(00) 9 9999-9999">
+              </div>
+            </div>
+
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" required placeholder="seu@exemplo.com">
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem" required></textarea>
+
+            <div style="display:flex;gap:10px;align-items:center;margin-top:6px">
+              <button class="btn" type="submit">Enviar mensagem</button>
+              <button type="button" onclick="resetForm()" class="link" style="background:none;border:0;color:var(--muted)">Limpar</button>
+            </div>
+
+            <p id="formNote" style="font-size:13px;color:var(--muted);margin-top:8px">Se o envio automático não funcionar, copiaremos os dados para seu e-mail.</p>
+          </form>
+
+          <script>
+            function submitContact(e){
+              e.preventDefault();
+              const nome = document.getElementById('nome').value.trim();
+              const email = document.getElementById('email').value.trim();
+              const mensagem = document.getElementById('mensagem').value.trim();
+              if(!nome || !email || !mensagem){
+                alert('Por favor, preencha nome, e-mail e mensagem.');
+                return false;
+              }
+              // Tenta abrir o cliente de email com mailto: (fallback simples)
+              const subject = encodeURIComponent('Contato - Mundo Manual ('+nome+')');
+              const body = encodeURIComponent('Nome: '+nome+'\nEmail: '+email+'\nTelefone: '+(document.getElementById('telefone').value||'')+'\n\nMensagem:\n'+mensagem);
+              window.location.href = 'mailto:contato@mundomanual.com?subject='+subject+'&body='+body;
+              return false;
+            }
+            function resetForm(){ document.getElementById('contactForm').reset(); }
+          </script>
+        </div>
+
+        <aside>
+          <div class="card" style="padding:12px;margin-bottom:12px">
+            <strong>Endereço</strong>
+            <div style="color:var(--muted);margin-top:6px">Rua das Artes, 123 — São Paulo, SP</div>
+            <div style="margin-top:8px;color:var(--muted)"><strong>Email:</strong> contato@mundomanual.com</div>
+            <div style="margin-top:4px;color:var(--muted)"><strong>Tel:</strong> 11-98765-4321</div>
+          </div>
+
+          <div class="map card" role="img" aria-label="Mapa da localização">
+            <!-- Substitua pela iframe do Google Maps com suas coordenadas -->
+            <div style="padding:10px;text-align:center">
+              <div style="font-weight:600">Mapa</div>
+              <div style="font-size:13px;color:var(--muted)">Substitua este bloco por um mapa real (iframe do Google Maps).</div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px;font-size:13px;color:var(--muted)">
+            <strong>Horários</strong>
+            <div>Seg — Sex: 14:00 — 18:00</div>
+            <div>Sáb: 9:00 — 12:00</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Mundo Manual! — Projeto do Ano - Senac 2025 · Feito com carinho para crianças e famílias.
+    </footer>
+  </main>
+</body>
+</html>
