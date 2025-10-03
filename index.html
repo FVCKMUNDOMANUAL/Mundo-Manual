@@ -5,159 +5,169 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mundo Manual</title>
   <style>
-    /* Reset básico */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-    }
-
     body {
-      background: linear-gradient(180deg, #b3e5fc, #e0f7fa);
-      color: #222;
-    }
-
-    header {
-      background: #0288d1;
-      padding: 15px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 4px solid #00796b;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: white;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .logo-img {
-      height: 70px;
-      margin-right: 12px;
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #c8e6c9;
-    }
-
-    .btn {
-      background: #43a047;
-      padding: 8px 15px;
-      border-radius: 8px;
-    }
-
-    .btn:hover {
-      background: #2e7d32;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      color: #0288d1;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: auto;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f8ff;
       color: #333;
     }
 
-    /* === VÍDEOS === */
-    .videos {
-      padding: 50px 20px;
+    header {
+      background-color: #00a896;
+      color: white;
+      padding: 15px;
       text-align: center;
     }
 
-    .videos h2 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-      color: #00796b;
+    header img {
+      width: 120px;
     }
 
-    .video-grid {
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #05668d;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 15px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    nav button:hover {
+      background-color: #028090;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 20px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .images-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .images-container div {
+      width: 30%;
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+
+    .images-container img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .videos-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-      max-width: 1100px;
-      margin: auto;
+      gap: 15px;
+      margin-top: 20px;
     }
 
-    .video-grid iframe {
+    .videos-container iframe {
       width: 100%;
       height: 200px;
-      border-radius: 12px;
-      border: 3px solid #0288d1;
+      border-radius: 10px;
     }
 
     footer {
-      background: #00796b;
+      background: #05668d;
       color: white;
       text-align: center;
-      padding: 15px;
-      margin-top: 40px;
+      padding: 10px;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
   <header>
-    <a href="#" class="brand">
-      <img src="logo.png" alt="Mundo Manual" class="logo-img">
-      Mundo Manual
-    </a>
-    <nav>
-      <a href="#">Início</a>
-      <a href="#">Oficinas</a>
-      <a href="#">Vídeos</a>
-      <a href="#">Contato</a>
-      <a href="#" class="btn">Inscreva-se</a>
-    </nav>
+    <img src="logo.png" alt="Logo Mundo Manual">
+    <h1>Mundo Manual</h1>
   </header>
 
-  <section class="hero">
-    <h1>Bem-vindo ao Mundo Manual!</h1>
-    <p>
-      Aqui você encontra atividades criativas e divertidas,
-      usando materiais simples e reciclados. Descubra oficinas de dobraduras,
-      colagens e recortes que ajudam no desenvolvimento da coordenação motora
-      e da imaginação!
-    </p>
-  </section>
+  <nav>
+    <button onclick="showTab('inicio')">Início</button>
+    <button onclick="showTab('videos')">Vídeos</button>
+    <button onclick="showTab('contato')">Contato</button>
+  </nav>
 
-  <!-- SEÇÃO DE VÍDEOS -->
-  <section class="videos" id="videos">
-    <h2>🎥 Nossos Vídeos</h2>
-    <div class="video-grid">
-      <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/aqz-KE-bpKQ" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/eX2qFMC8cFo" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/lTTajzrSkCw" allowfullscreen></iframe>
+  <!-- Início -->
+  <section id="inicio" class="tab-content active">
+    <h2>Bem-vindo ao Mundo Manual!</h2>
+    <p>Brincar, criar e construir coisas com as próprias mãos é mais do que diversão: 
+      é aprendizado, coordenação motora e liberdade da dependência das telas. 
+      Aqui você encontra ideias e inspirações para voltar ao mundo real, 
+      onde a imaginação é o limite!</p>
+
+    <div class="images-container">
+      <div>
+        <img src="brinquedo1.jpg" alt="Cobrinha de tampinhas">
+        <p><b>Cobrinha de tampinhas:</b> feita com tampinhas de garrafa e barbante, ajuda na coordenação motora e reutiliza materiais recicláveis.</p>
+      </div>
+      <div>
+        <img src="brinquedo2.jpg" alt="Pipa artesanal">
+        <p><b>Pipa artesanal:</b> montar e soltar pipa é uma das brincadeiras mais clássicas, incentivando criatividade e interação ao ar livre.</p>
+      </div>
+      <div>
+        <img src="brinquedo3.jpg" alt="Origami">
+        <p><b>Origami:</b> a arte de dobrar papéis, que estimula a paciência, concentração e habilidade manual.</p>
+      </div>
     </div>
   </section>
 
+  <!-- Vídeos -->
+  <section id="videos" class="tab-content">
+    <h2>Vídeos para Inspirar</h2>
+    <div class="videos-container">
+      <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0"></iframe>
+      <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" frameborder="0"></iframe>
+      <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0"></iframe>
+      <iframe src="https://www.youtube.com/embed/oUFJJNQGwhk" frameborder="0"></iframe>
+      <iframe src="https://www.youtube.com/embed/e-ORhEE9VVg" frameborder="0"></iframe>
+      <iframe src="https://www.youtube.com/embed/CevxZvSJLk8" frameborder="0"></iframe>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="tab-content">
+    <h2>Entre em Contato</h2>
+    <p>Email: <a href="mailto:mundomanual@gmail.com">mundomanual@gmail.com</a></p>
+    <p><b>Integrantes:</b></p>
+    <ul>
+      <li>Caio Freitas</li>
+      <li>Ryan Nery</li>
+      <li>Pietro Kaiser</li>
+      <li>Eduardo Reis</li>
+    </ul>
+  </section>
+
   <footer>
-    <p>🌍 Mundo Manual - De brincalhões, para brincalhões! 💙💚</p>
+    <p>&copy; 2025 Mundo Manual - Todos os direitos reservados</p>
   </footer>
+
+  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
 </body>
 </html>
-
