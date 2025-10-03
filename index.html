@@ -8,16 +8,16 @@
     body {
       margin: 0;
       font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: linear-gradient(135deg, #a8edea, #fed6e3);
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
       color: #333;
     }
 
     header {
-      background: linear-gradient(135deg, #00a896, #02c39a);
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
       color: white;
       padding: 20px;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
 
     header img {
@@ -29,7 +29,7 @@
     nav {
       display: flex;
       justify-content: center;
-      background-color: #05668d;
+      background: linear-gradient(135deg, #43cea2, #185a9d);
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
@@ -45,14 +45,14 @@
     }
 
     nav button:hover {
-      background-color: #028090;
+      background-color: rgba(255, 255, 255, 0.2);
       border-radius: 8px;
     }
 
     .tab-content {
       display: none;
-      padding: 30px;
-      animation: fadeIn 0.5s;
+      padding: 40px 20px;
+      animation: fadeIn 0.6s;
     }
 
     .active {
@@ -70,21 +70,32 @@
       margin-bottom: 20px;
     }
 
+    .intro {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      background: #fff8e1;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
     .images-container {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-      margin-top: 20px;
-      gap: 20px;
+      gap: 25px;
+      margin: 40px 0;
     }
 
     .images-container div {
       width: 30%;
-      min-width: 250px;
+      min-width: 260px;
       background: white;
-      padding: 15px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
       text-align: center;
       transition: transform 0.2s;
     }
@@ -95,7 +106,42 @@
 
     .images-container img {
       width: 100%;
-      border-radius: 10px;
+      border-radius: 15px;
+      margin-bottom: 12px;
+    }
+
+    .benefits {
+      margin-top: 40px;
+      background: linear-gradient(135deg, #f6d365, #fda085);
+      padding: 40px 20px;
+      border-radius: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    .benefits h2 {
+      color: white;
+      margin-bottom: 25px;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .benefit-card {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+      padding: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .benefit-card span {
+      font-size: 30px;
+      display: block;
       margin-bottom: 10px;
     }
 
@@ -132,7 +178,7 @@
       background: #05668d;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       margin-top: 30px;
     }
 
@@ -157,26 +203,38 @@
   <!-- Início -->
   <section id="inicio" class="tab-content active">
     <h2>Bem-vindo ao Mundo Manual!</h2>
-    <p style="text-align:center; font-size:18px;">
-      Fazer brinquedos manuais é muito mais do que se divertir: desenvolve criatividade, 
-      coordenação motora, paciência e ainda ajuda a reduzir o tempo em frente às telas. 
-      Vamos redescobrir juntos o prazer de brincar de verdade!
-    </p>
+    <div class="intro">
+      <p>O <b>Mundo Manual</b> nasceu para mostrar que brincar não precisa de telas, aplicativos ou eletrônicos. 
+      Aqui, cada criança pode soltar a imaginação e construir brinquedos únicos com materiais simples do dia a dia.</p>
+      <p>Com nossas ideias, você vai aprender a criar brinquedos que não só divertem, mas também desenvolvem 
+      <b>coordenação motora</b>, <b>criatividade</b>, <b>paciência</b> e <b>trabalho em equipe</b>. 
+      E o melhor: cuidando do planeta com a reutilização de materiais recicláveis!</p>
+    </div>
 
     <div class="images-container">
       <div>
         <img src="brinquedo1.jpg" alt="Cobrinha de tampinhas">
-        <p><b>Cobrinha de tampinhas:</b> feita com tampinhas de garrafa e barbante, 
-          ótima para treinar coordenação motora e consciência ambiental.</p>
+        <p><b>Cobrinha de tampinhas:</b> feita com tampinhas de garrafa e barbante, ótima para treinar coordenação motora e consciência ambiental.</p>
       </div>
       <div>
         <img src="brinquedo2.jpg" alt="Pipa artesanal">
-        <p><b>Pipa artesanal:</b> construir e soltar pipa é diversão ao ar livre, 
-          incentivando criatividade e movimento.</p>
+        <p><b>Pipa artesanal:</b> construir e soltar pipa é diversão ao ar livre, incentivando criatividade e movimento.</p>
       </div>
       <div>
         <img src="brinquedo3.jpg" alt="Origami">
-        <p><b>Origami:</b> dobrar papéis é arte que estimula concentração e imaginação.</p>
+        <p><b>Origami:</b> dobrar papéis é uma arte que estimula concentração e imaginação sem limites!</p>
+      </div>
+    </div>
+
+    <div class="benefits">
+      <h2>Por que brincar é importante?</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card"><span>🖐️</span> Melhora a coordenação motora</div>
+        <div class="benefit-card"><span>🎨</span> Estimula a criatividade</div>
+        <div class="benefit-card"><span>👫</span> Incentiva brincadeiras em grupo</div>
+        <div class="benefit-card"><span>🌍</span> Ajuda o meio ambiente com reciclagem</div>
+        <div class="benefit-card"><span>💡</span> Desenvolve foco e concentração</div>
+        <div class="benefit-card"><span>😊</span> Faz bem para o corpo e para a mente</div>
       </div>
     </div>
   </section>
@@ -199,42 +257,10 @@
         <div class="passo">
           <b>Passo a Passo:</b><br>
           Passo 1: xxxx <br>
-          Passo 2: xxxx <br>
-          Passo 3: xxxx
-        </div>
-      </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0"></iframe>
-        <div class="passo">
-          <b>Passo a Passo:</b><br>
-          Passo 1: xxxx <br>
           Passo 2: xxxx
         </div>
       </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/oUFJJNQGwhk" frameborder="0"></iframe>
-        <div class="passo">
-          <b>Passo a Passo:</b><br>
-          Passo 1: xxxx <br>
-          Passo 2: xxxx
-        </div>
-      </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/e-ORhEE9VVg" frameborder="0"></iframe>
-        <div class="passo">
-          <b>Passo a Passo:</b><br>
-          Passo 1: xxxx <br>
-          Passo 2: xxxx
-        </div>
-      </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/CevxZvSJLk8" frameborder="0"></iframe>
-        <div class="passo">
-          <b>Passo a Passo:</b><br>
-          Passo 1: xxxx <br>
-          Passo 2: xxxx
-        </div>
-      </div>
+      <!-- você pode duplicar os blocos acima e trocar o link -->
     </div>
   </section>
 
@@ -242,16 +268,16 @@
   <section id="contato" class="tab-content">
     <h2>Entre em Contato</h2>
     <p style="text-align:center; font-size:18px;">
-      Caso tenha dúvidas, sugestões ou queira compartilhar uma construção de brinquedo 
-      feita por você, mande para o nosso e-mail. Vamos adorar ver a sua criatividade em ação!
+      Caso tenha dúvidas, sugestões ou queira compartilhar uma construção de brinquedo feita por você, 
+      mande para o nosso e-mail. Vamos adorar ver a sua criatividade em ação!
     </p>
     <p style="text-align:center; font-size:20px; font-weight:bold;">
-      <a href="mailto:mundomanual@gmail.com">mundomanual@gmail.com</a>
+      <a href="mailto:ouniversomundomanual@gmail.com">ouniversomundomanual@gmail.com</a>
     </p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Mundo Manual - De brincalhões, para brincalhões!</p>
+    <p>&copy; 2025 Mundo Manual - Criando diversão com as próprias mãos</p>
   </footer>
 
   <script>
