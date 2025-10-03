@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mundo Manual</title>
+  <!-- Ícones animados -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       margin: 0;
@@ -18,12 +20,29 @@
       padding: 20px;
       text-align: center;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      position: relative;
     }
 
     header img {
       width: 120px;
       border-radius: 50%;
       border: 3px solid #fff;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    header h1 {
+      margin: 10px 0;
+      font-size: 36px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    }
+
+    header p {
+      font-size: 18px;
     }
 
     nav {
@@ -47,6 +66,7 @@
     nav button:hover {
       background-color: rgba(255, 255, 255, 0.2);
       border-radius: 8px;
+      transform: scale(1.1);
     }
 
     .tab-content {
@@ -68,6 +88,7 @@
       color: #05668d;
       text-align: center;
       margin-bottom: 20px;
+      font-size: 28px;
     }
 
     .intro {
@@ -137,12 +158,24 @@
       font-size: 18px;
       font-weight: bold;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .benefit-card:hover {
+      transform: translateY(-8px) rotate(-2deg);
     }
 
     .benefit-card span {
-      font-size: 30px;
+      font-size: 35px;
       display: block;
       margin-bottom: 10px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
     }
 
     .videos-container {
@@ -157,6 +190,11 @@
       border-radius: 15px;
       padding: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .video-card:hover {
+      transform: scale(1.05);
     }
 
     .video-card iframe {
@@ -191,50 +229,50 @@
   <header>
     <img src="logo.png" alt="Logo Mundo Manual">
     <h1>Mundo Manual</h1>
-    <p>Brincar, criar e se divertir longe das telas!</p>
+    <p><i class="fa-solid fa-star"></i> Brincar, criar e se divertir longe das telas! <i class="fa-solid fa-star"></i></p>
   </header>
 
   <nav>
-    <button onclick="showTab('inicio')">Início</button>
-    <button onclick="showTab('videos')">Vídeos</button>
-    <button onclick="showTab('contato')">Contato</button>
+    <button onclick="showTab('inicio')"><i class="fa-solid fa-house"></i> Início</button>
+    <button onclick="showTab('videos')"><i class="fa-solid fa-video"></i> Vídeos</button>
+    <button onclick="showTab('contato')"><i class="fa-solid fa-envelope"></i> Contato</button>
   </nav>
 
   <!-- Início -->
   <section id="inicio" class="tab-content active">
     <h2>Bem-vindo ao Mundo Manual!</h2>
     <div class="intro">
-      <p>O <b>Mundo Manual</b> nasceu para mostrar que brincar não precisa de telas, aplicativos ou eletrônicos. 
-      Aqui, cada criança pode soltar a imaginação e construir brinquedos únicos com materiais simples do dia a dia.</p>
+      <p>O <b>Mundo Manual</b> está aqui para mostrar para você que brincar não precisa de telas, aplicativos ou eletrônicos. 
+      Aqui, cada pessoa pode soltar a imaginação e construir brinquedos divertidos com materiais simples do dia a dia.</p>
       <p>Com nossas ideias, você vai aprender a criar brinquedos que não só divertem, mas também desenvolvem 
       <b>coordenação motora</b>, <b>criatividade</b>, <b>paciência</b> e <b>trabalho em equipe</b>. 
-      E o melhor: cuidando do planeta com a reutilização de materiais recicláveis!</p>
+      E o melhor: cuidando do nosso planeta com o uso de materiais recicláveis!</p>
     </div>
 
     <div class="images-container">
       <div>
         <img src="brinquedo1.jpg" alt="Cobrinha de tampinhas">
-        <p><b>Cobrinha de tampinhas:</b> feita com tampinhas de garrafa e barbante, ótima para treinar coordenação motora e consciência ambiental.</p>
+        <p><b>Cobrinha de tampinhas:</b> feita com tampinhas de garrafa e barbante, ótima para treinar coordenação motora e a criatividade.</p>
       </div>
       <div>
         <img src="brinquedo2.jpg" alt="Pipa artesanal">
-        <p><b>Pipa artesanal:</b> construir e soltar pipa é diversão ao ar livre, incentivando criatividade e movimento.</p>
+        <p><b>Pipa artesanal:</b> vamos construir e costumizar pipas, mostrando que as brincadeiras antigas ainda divertem.</p>
       </div>
       <div>
-        <img src="brinquedo3.jpg" alt="Origami">
-        <p><b>Origami:</b> dobrar papéis é uma arte que estimula concentração e imaginação sem limites!</p>
+        <img src="brinquedo3.jpg" alt="Bilboquê">
+        <p><b>Origami:</b> podemos transformar um pedaço de garrafa em um bilboquê super atrativo!</p>
       </div>
     </div>
 
     <div class="benefits">
       <h2>Por que brincar é importante?</h2>
       <div class="benefits-grid">
-        <div class="benefit-card"><span>🖐️</span> Melhora a coordenação motora</div>
-        <div class="benefit-card"><span>🎨</span> Estimula a criatividade</div>
-        <div class="benefit-card"><span>👫</span> Incentiva brincadeiras em grupo</div>
-        <div class="benefit-card"><span>🌍</span> Ajuda o meio ambiente com reciclagem</div>
-        <div class="benefit-card"><span>💡</span> Desenvolve foco e concentração</div>
-        <div class="benefit-card"><span>😊</span> Faz bem para o corpo e para a mente</div>
+        <div class="benefit-card"><span><i class="fa-solid fa-hand"></i></span> Melhora a coordenação motora</div>
+        <div class="benefit-card"><span><i class="fa-solid fa-paintbrush"></i></span> Estimula a criatividade</div>
+        <div class="benefit-card"><span><i class="fa-solid fa-people-group"></i></span> Incentiva brincadeiras em grupo</div>
+        <div class="benefit-card"><span><i class="fa-solid fa-earth-americas"></i></span> Ajuda o meio ambiente com reciclagem</div>
+        <div class="benefit-card"><span><i class="fa-solid fa-lightbulb"></i></span> Desenvolve foco e concentração</div>
+        <div class="benefit-card"><span><i class="fa-solid fa-face-smile"></i></span> Faz bem para o corpo e para a mente</div>
       </div>
     </div>
   </section>
@@ -260,7 +298,6 @@
           Passo 2: xxxx
         </div>
       </div>
-      <!-- você pode duplicar os blocos acima e trocar o link -->
     </div>
   </section>
 
@@ -268,8 +305,8 @@
   <section id="contato" class="tab-content">
     <h2>Entre em Contato</h2>
     <p style="text-align:center; font-size:18px;">
-      Caso tenha dúvidas, sugestões ou queira compartilhar uma construção de brinquedo feita por você, 
-      mande para o nosso e-mail. Vamos adorar ver a sua criatividade em ação!
+      Caso tenha dúvidas, sugestões ou queira compartilhar a construção de um brinquedo feito por você, 
+      mande para o nosso e-mail. Vamos adorar ver suas criações!
     </p>
     <p style="text-align:center; font-size:20px; font-weight:bold;">
       <a href="mailto:ouniversomundomanual@gmail.com">ouniversomundomanual@gmail.com</a>
@@ -277,7 +314,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Mundo Manual - Criando diversão com as próprias mãos</p>
+    <p>&copy; 2025 Mundo Manual - De brincalhões, para brincalhões!</p>
   </footer>
 
   <script>
