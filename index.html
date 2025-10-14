@@ -23,6 +23,7 @@
       font-family: 'Poppins', sans-serif;
       background: radial-gradient(circle at 10% 10%, var(--bg-1), var(--bg-2));
       color: var(--text);
+      line-height:1.6;
     }
 
     header{
@@ -37,35 +38,43 @@
     nav button{ background:none; border:0; color:var(--text); padding:12px 18px; font-weight:600; border-radius:10px; cursor:pointer; transition:all .28s; }
     nav button:hover{ transform:translateY(-3px); box-shadow: var(--led-glow); color:#fff; background:linear-gradient(90deg, var(--accent-1), var(--accent-2)); }
 
-    .container{ max-width:1100px; margin:0 auto; padding:28px 18px 60px; }
+    .container{ max-width:1100px; margin:0 auto; padding:40px 18px 80px; }
 
     .tab-content{ display:none; padding:18px 0; }
     .tab-content.active{ display:block; }
 
     h2{ color: #2c5d7b; text-align:center; margin:6px 0 18px; }
 
-    .intro-top, .intro-bottom{ text-align:center; font-size:18px; line-height:1.65; background:var(--card); padding:18px; border-radius:12px; border:1px solid rgba(179,157,219,0.26); margin-bottom:28px; }
+    .intro-top, .intro-bottom{ text-align:center; font-size:18px; line-height:1.65; background:var(--card); padding:20px; border-radius:12px; border:1px solid rgba(179,157,219,0.26); margin-bottom:28px; transition:all .3s; }
+    .intro-top:hover, .intro-bottom:hover{ transform:translateY(-3px); box-shadow: var(--led-glow); }
 
-    .images-container{ display:flex; justify-content:center; gap:28px; flex-wrap:wrap; margin:28px 0; }
-    .images-container .card{ width:240px; background:var(--card); padding:14px; border-radius:14px; text-align:center; border:1px solid rgba(179,157,219,0.18); box-shadow:0 8px 22px rgba(80, 80, 110, 0.04); transition:transform .25s; }
+    .images-container{ display:flex; justify-content:center; gap:32px; flex-wrap:wrap; margin:32px 0; }
+    .images-container .card{ width:220px; background:var(--card); padding:14px; border-radius:14px; text-align:center; border:1px solid rgba(179,157,219,0.18); box-shadow:0 8px 22px rgba(80, 80, 110, 0.04); transition:transform .25s; }
     .images-container .card img{ width:100%; height:150px; object-fit:cover; border-radius:10px; display:block; margin-bottom:12px; }
     .images-container .card:hover{ transform:translateY(-6px); box-shadow:var(--led-glow); }
 
-    .benefits{ margin-top:28px; background:linear-gradient(135deg, rgba(129,212,250,0.12), rgba(79,195,247,0.08)); padding:26px; border-radius:14px; }
-    .benefits-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; }
-    .benefit-card{ background:rgba(255,255,255,0.95); padding:12px; border-radius:10px; text-align:center; font-weight:600; box-shadow:0 6px 16px rgba(80,80,110,0.04); }
+    .benefits{ margin-top:28px; background:linear-gradient(135deg, rgba(129,212,250,0.12), rgba(79,195,247,0.08)); padding:26px; border-radius:14px; transition:all .3s; }
+    .benefits:hover{ transform:translateY(-3px); box-shadow:var(--led-glow); }
+    .benefits-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:16px; }
+    .benefit-card{ background:rgba(255,255,255,0.95); padding:12px; border-radius:10px; text-align:center; font-weight:600; box-shadow:0 6px 16px rgba(80,80,110,0.04); transition:all .3s; }
+    .benefit-card:hover{ transform:translateY(-4px); box-shadow:var(--led-glow); }
     .benefit-card span{ font-size:28px; display:block; margin-bottom:8px; }
 
-    .videos-container{ display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:24px; margin-top:20px; }
-    .video-card{ background:var(--card); padding:12px; border-radius:12px; border:1px solid rgba(179,157,219,0.12); box-shadow:0 10px 32px rgba(80,80,110,0.05); transition:box-shadow .25s, transform .25s; }
+    .videos-container{ display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:28px; margin-top:32px; }
+    .video-card{ background:var(--card); padding:16px; border-radius:12px; border:1px solid rgba(179,157,219,0.12); box-shadow:0 10px 32px rgba(80,80,110,0.05); transition:box-shadow .25s, transform .25s; }
     .video-card:hover{ box-shadow:var(--led-glow); transform:translateY(-6px); }
     .video-card iframe{ width:100%; height:210px; border-radius:8px; border:0; }
-    .video-card h3{ text-align:center; color:#2c5d7b; margin:8px 0; }
-    .passo{ font-size:14px; background:#f0fbff; padding:10px; border-radius:8px; border:1px solid rgba(179,157,219,0.08); }
+    .video-card h3{ text-align:center; color:#2c5d7b; margin:8px 0; transition:all .3s; }
+    .video-card h3:hover{ transform:translateY(-3px); color:#1565c0; }
+    .passo{ font-size:14px; background:#f0fbff; padding:12px; border-radius:8px; border:1px solid rgba(179,157,219,0.08); transition:all .3s; }
+    .passo:hover{ transform:translateY(-2px); box-shadow:var(--led-glow); }
 
-    #contato{ background:linear-gradient(180deg, rgba(129,212,250,0.06), rgba(79,195,247,0.03)); padding:28px; border-radius:12px; text-align:center; }
-    #contato a{ color:var(--accent-1); font-weight:700; text-decoration:none; }
-    footer{ text-align:center; padding:18px; margin-top:28px; background:linear-gradient(90deg, var(--accent-1), var(--accent-2)); color:#fff; border-top-left-radius:12px; border-top-right-radius:12px; box-shadow:var(--led-glow); }
+    #contato{ background:linear-gradient(180deg, rgba(129,212,250,0.06), rgba(79,195,247,0.03)); padding:32px; border-radius:12px; text-align:center; transition:all .3s; }
+    #contato:hover{ transform:translateY(-3px); box-shadow:var(--led-glow); }
+    #contato a{ color:var(--accent-1); font-weight:700; text-decoration:none; transition:all .3s; }
+    #contato a:hover{ color:var(--accent-2); }
+
+    footer{ text-align:center; padding:18px; margin-top:32px; background:linear-gradient(90deg, var(--accent-1), var(--accent-2)); color:#fff; border-top-left-radius:12px; border-top-right-radius:12px; box-shadow:var(--led-glow); }
 
   </style>
 </head>
@@ -88,11 +97,13 @@
     <section id="inicio" class="tab-content active">
       <h2>Bem-vindo ao Mundo Manual!</h2>
       <div class="intro-top">O <b>Mundo Manual</b> está aqui para mostrar para você que brincar não precisa de telas, aplicativos ou eletrônicos. Aqui, cada pessoa pode soltar a imaginação e construir brinquedos divertidos com materiais simples do dia a dia.</div>
+
       <div class="images-container">
         <div class="card"><img src="cobra.jpg" alt="Cobrinha de tampinhas"><p><b>Cobrinha de tampinhas:</b> feita com tampinhas de garrafa e barbante, ótima para treinar coordenação motora e a criatividade.</p></div>
         <div class="card"><img src="pipa.jpg" alt="Pipa artesanal"><p><b>Pipa artesanal:</b> vamos construir e costumizar pipas, mostrando que as brincadeiras antigas ainda divertem.</p></div>
         <div class="card"><img src="bilboque.jpg" alt="Bilboquê"><p><b>Bilboquê:</b> podemos transformar um pedaço de garrafa em um bilboquê super atrativo!</p></div>
       </div>
+
       <div class="intro-bottom">Com nossas ideias, você vai aprender a criar brinquedos que não só divertem, mas também desenvolvem <b>coordenação motora</b>, <b>criatividade</b>, <b>paciência</b> e <b>trabalho em equipe</b>. E o melhor: cuidando do nosso planeta com o uso de materiais recicláveis!</div>
 
       <div class="benefits">
@@ -103,4 +114,23 @@
           <div class="benefit-card"><span>👫</span> Incentiva brincadeiras em grupo</div>
           <div class="benefit-card"><span>🌍</span> Ajuda o meio ambiente com reciclagem</div>
           <div class="benefit-card"><span>💡</span> Desenvolve foco e concentração</div>
-          <div class="benefit-card
+          <div class="benefit-card"><span>😊</span> Faz bem para o corpo e para a mente</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="videos" class="tab-content">
+      <h2>Aprenda a fazer seus brinquedos agora!</h2>
+      <div class="videos-container">
+        <div class="video-card"><h3>1. Cobrinha com tampinhas</h3><iframe src="https://www.youtube.com/embed/tTVKCb1ywDk" allowfullscreen></iframe><div class="passo"><b>Passo a Passo:</b><br>Passo 1: Faça um furo no meio das tampinhas <br>Passo 2: Passe o barbante por todas as tampinhas, uma atrás da outra<br>Passo 3: Dê um nó, para não soltar<br>Passo 4: Decore como quiser e se divirta!</div></div>
+
+        <div class="video-card"><h3>2. Bilboquê</h3><iframe src="https://www.youtube.com/embed/_9XTBrHPOr4" allowfullscreen></iframe><div class="passo"><b>Passo a Passo:</b><br>Passo 1: Corte a parte de cima da garrafa (com o bico) <br>Passo 2: Faça um furo na tampinha<br>Passo 3: Amarre a outra ponta do barbante no gargalo da garrafa</div></div>
+
+        <div class="video-card"><h3>3. Origami Cisne</h3><iframe src="https://www.youtube.com/embed/2H95_meLUqs" allowfullscreen></iframe><div class="passo"><b>Passo a Passo:</b><br>Passo 1: Dobre o papel formando um triângulo (na diagonal) <br>Passo 2: Dobre as duas pontas<br>Passo 3: Dobre novamente e puxe uma das pontas para cima (formando o pescoço)<br>Passo 4: Dobre a pontinha do 'pescoço' para baixo<br>Passo 5: Ajuste os lados e assim forme seu origami de cisne!</div></div>
+      </div>
+    </section>
+
+    <section id="contato" class="tab-content">
+      <h2>Entre em Contato</h2>
+      <p>Caso tenha sugestões ou queira compartilhar uma construção de brinquedo feita por você, mande para o nosso e-mail. Vamos adorar ver suas criações!</p>
+      <p><a href="mailto:ouniversomundomanual@gmail.com">oun
