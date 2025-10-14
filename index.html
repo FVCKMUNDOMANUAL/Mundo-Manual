@@ -4,22 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mundo Manual</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: url('https://www.transparenttextures.com/patterns/confetti.png');
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #dbeeff, #f4eaff);
       color: #333;
     }
 
     header {
-      background: linear-gradient(135deg, #00c6ff, #0072ff, #00ffcc);
+      background: linear-gradient(135deg, #6ec1e4, #89f0d1, #8fa9f4);
       color: white;
       padding: 20px;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      border: 2px solid rgba(255, 255, 255, 0.6);
-      animation: glow 2s infinite alternate;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      border-bottom: 3px solid rgba(255,255,255,0.4);
+      animation: glow 3s infinite alternate;
     }
 
     header img {
@@ -31,8 +32,8 @@
     nav {
       display: flex;
       justify-content: center;
-      background: linear-gradient(135deg, #43cea2, #185a9d);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      background: linear-gradient(135deg, #6ab7ff, #9c9dfc);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
 
     nav button {
@@ -41,13 +42,14 @@
       color: white;
       padding: 15px 25px;
       font-size: 18px;
-      font-weight: bold;
+      font-weight: 600;
       cursor: pointer;
       transition: 0.3s;
+      letter-spacing: 0.5px;
     }
 
     nav button:hover {
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: rgba(255, 255, 255, 0.25);
       border-radius: 8px;
     }
 
@@ -67,16 +69,12 @@
     }
 
     @keyframes glow {
-      from {
-        box-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff, 0 0 30px #00eaff;
-      }
-      to {
-        box-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
-      }
+      from {box-shadow: 0 0 15px #b3e5fc;}
+      to {box-shadow: 0 0 25px #ce93d8;}
     }
 
     h2 {
-      color: #05668d;
+      color: #4b7bec;
       text-align: center;
       margin-bottom: 20px;
     }
@@ -110,7 +108,7 @@
       box-shadow: 0 6px 12px rgba(0,0,0,0.2);
       text-align: center;
       transition: transform 0.2s;
-      border: 2px solid #ffe0b2;
+      border: 2px solid #c5cae9;
     }
 
     .images-container div:hover {
@@ -125,12 +123,12 @@
 
     .benefits {
       margin-top: 40px;
-      background: linear-gradient(135deg, #f6d365, #fda085, #fbc2eb);
+      background: linear-gradient(135deg, #b2ebf2, #bbdefb, #ce93d8);
       padding: 40px 20px;
       border-radius: 20px;
       color: #fff;
       text-align: center;
-      border: 2px solid rgba(255,255,255,0.5);
+      border: 2px solid rgba(255,255,255,0.4);
     }
 
     .benefits h2 {
@@ -145,12 +143,12 @@
     }
 
     .benefit-card {
-      background: rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.25);
       border-radius: 15px;
       padding: 20px;
       font-size: 18px;
-      font-weight: bold;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      font-weight: 600;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
       transition: transform 0.3s;
     }
 
@@ -176,7 +174,13 @@
       border-radius: 15px;
       padding: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      border: 2px solid #b2ebf2;
+      border: 2px solid #b3e5fc;
+    }
+
+    .video-card h3 {
+      text-align: center;
+      color: #4b7bec;
+      margin-bottom: 10px;
     }
 
     .video-card iframe {
@@ -189,26 +193,28 @@
     .passo {
       text-align: left;
       font-size: 14px;
-      background: #f9f9f9;
+      background: #f3faff;
       padding: 10px;
       border-radius: 8px;
+      border: 1px solid #bbdefb;
     }
 
     #contato {
-      background: linear-gradient(135deg, #ffd6ff, #ffefff, #caffbf);
+      background: linear-gradient(135deg, #f3e5f5, #e1f5fe);
       padding: 40px 20px;
       border-radius: 20px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
       text-align: center;
     }
 
     #contato a {
-      color: #0072ff;
+      color: #4b7bec;
       text-decoration: none;
+      font-weight: 600;
     }
 
     footer {
-      background: #05668d;
+      background: #4b7bec;
       color: white;
       text-align: center;
       padding: 20px;
@@ -274,40 +280,42 @@
 
   <!-- Vídeos -->
   <section id="videos" class="tab-content">
-    <h2>Vídeos para Inspirar</h2>
+    <h2>Aprenda a fazer seus brinquedos agora!</h2>
     <div class="videos-container">
       <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0"></iframe>
+        <h3>1. Cobrinha com tampinhas</h3>
+        <iframe src="https://www.youtube.com/watch?v=tTVKCb1ywDk" frameborder="0"></iframe>
         <div class="passo">
           <b>Passo a Passo:</b><br>
-          Passo 1: xxxx <br>
-          Passo 2: xxxx <br>
-          Passo 3: xxxx
+          Passo 1: Faça um furo no meio das tampinhas <br>
+          Passo 2: Passe o barbante por todas as tampinhas, uma atrás da outra<br>
+          Passo 3: Dê um nó, para não soltar<br>
+          Passo 4: Decore como quiser e se divirta!
         </div>
       </div>
+
       <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" frameborder="0"></iframe>
+        <h3>2. Bilboquê</h3>
+        <iframe src="https://www.youtube.com/watch?v=_9XTBrHPOr4" frameborder="0"></iframe>
         <div class="passo">
           <b>Passo a Passo:</b><br>
-          Passo 1: xxxx <br>
-          Passo 2: xxxx
+          Passo 1: Corte a parte de cima da garrafa (com o bico) <br>
+          Passo 2: Faça um furo na tampinha<br>
+          Passo 3: Amarre a outra ponta do barbante no gargalo da garrafa
         </div>
       </div>
+
       <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0"></iframe>
-        <div class="passo"><b>Passo a Passo:</b><br>Passo 1: xxxx <br>Passo 2: xxxx</div>
-      </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" frameborder="0"></iframe>
-        <div class="passo"><b>Passo a Passo:</b><br>Passo 1: xxxx <br>Passo 2: xxxx</div>
-      </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" frameborder="0"></iframe>
-        <div class="passo"><b>Passo a Passo:</b><br>Passo 1: xxxx <br>Passo 2: xxxx</div>
-      </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" frameborder="0"></iframe>
-        <div class="passo"><b>Passo a Passo:</b><br>Passo 1: xxxx <br>Passo 2: xxxx</div>
+        <h3>3. Origami Cisne</h3>
+        <iframe src="https://www.youtube.com/watch?v=2H95_meLUqs" frameborder="0"></iframe>
+        <div class="passo">
+          <b>Passo a Passo:</b><br>
+          Passo 1: Dobre o papel formando um triângulo (na diagonal) <br>
+          Passo 2: Dobre as duas pontas<br>
+          Passo 3: Dobre novamente e puxe uma das pontas para cima (formando o pescoço)<br>
+          Passo 4: Dobre a pontinha do ''pescoço'' para baixo<br>
+          Passo 5: Ajuste os lados e assim forme seu origame de cisne!
+        </div>
       </div>
     </div>
   </section>
