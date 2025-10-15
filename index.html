@@ -12,22 +12,74 @@
       font-family: 'Poppins', sans-serif;
       background: url('https://www.transparenttextures.com/patterns/confetti.png');
       color: #333;
+      overflow-x: hidden;
     }
 
     header {
+      position: relative;
       background: linear-gradient(135deg, #00c6ff, #0072ff, #00ffcc);
       color: white;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4);
       border: 2px solid rgba(255, 255, 255, 0.6);
       animation: glow 2s infinite alternate;
+      overflow: hidden;
     }
 
     header img {
-      width: 120px;
+      width: 130px;
       border-radius: 50%;
       border: 3px solid #fff;
+      margin-bottom: 10px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.7);
+    }
+
+    header h1 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 2.5em;
+      margin: 10px 0;
+      text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    }
+
+    header p {
+      font-size: 1.3em;
+      font-weight: 500;
+      text-shadow: 0 0 8px rgba(255,255,255,0.4);
+      animation: fadeIn 3s ease;
+    }
+
+    /* balões animados no cabeçalho */
+    .header-balloons {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      overflow: visible;
+      pointer-events: none;
+    }
+
+    .balloon-header {
+      position: absolute;
+      bottom: -100px;
+      width: 45px;
+      height: 60px;
+      border-radius: 50%;
+      opacity: 0.9;
+      animation: rise 8s linear infinite;
+    }
+
+    .balloon-header:nth-child(1) { left: 10%; background: radial-gradient(circle at 30% 30%, #ff9a9e, #fad0c4); animation-delay: 0s; }
+    .balloon-header:nth-child(2) { left: 30%; background: radial-gradient(circle at 30% 30%, #a1c4fd, #c2e9fb); animation-delay: 2s; }
+    .balloon-header:nth-child(3) { left: 50%; background: radial-gradient(circle at 30% 30%, #fbc2eb, #a6c1ee); animation-delay: 4s; }
+    .balloon-header:nth-child(4) { left: 70%; background: radial-gradient(circle at 30% 30%, #84fab0, #8fd3f4); animation-delay: 6s; }
+    .balloon-header:nth-child(5) { left: 85%; background: radial-gradient(circle at 30% 30%, #f6d365, #fda085); animation-delay: 3s; }
+
+    @keyframes rise {
+      0% { transform: translateY(100px) scale(1); opacity: 1; }
+      50% { opacity: 0.9; transform: translateY(-150px) scale(1.05); }
+      100% { transform: translateY(-400px) scale(0.95); opacity: 0; }
     }
 
     nav {
@@ -83,28 +135,23 @@
       margin-bottom: 20px;
     }
 
-    /* caixas de texto atualizadas */
     .intro {
       text-align: center;
       font-family: 'Quicksand', sans-serif;
       font-size: 20px;
       margin-bottom: 30px;
       line-height: 1.6;
-      background: linear-gradient(145deg, #e0f7fa, #f1f8e9);
+      background: linear-gradient(145deg, #fff8dc, #fceabb);
       padding: 25px;
       border-radius: 18px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1),
-                  0 0 10px rgba(173, 216, 230, 0.4),
-                  0 0 20px rgba(255, 182, 193, 0.3);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1), 0 0 10px rgba(255, 255, 200, 0.4);
       border: 2px solid rgba(255, 255, 255, 0.4);
       transition: all 0.3s ease;
     }
 
     .intro:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2),
-                  0 0 15px rgba(173, 216, 230, 0.6),
-                  0 0 25px rgba(255, 182, 193, 0.5);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2), 0 0 15px rgba(255, 255, 150, 0.7);
     }
 
     .images-container {
@@ -268,135 +315,14 @@
 </head>
 <body>
   <header>
+    <div class="header-balloons">
+      <div class="balloon-header"></div>
+      <div class="balloon-header"></div>
+      <div class="balloon-header"></div>
+      <div class="balloon-header"></div>
+      <div class="balloon-header"></div>
+    </div>
     <img src="logo.png" alt="Logo Mundo Manual">
     <h1>Mundo Manual</h1>
-    <p>Brincar, criar e se divertir longe das telas!</p>
+    <p>Crie, brinque e se divirta longe das telas!</p>
   </header>
-
-  <nav>
-    <button onclick="showTab('inicio')">Início</button>
-    <button onclick="showTab('quem')">Quem Somos?</button>
-    <button onclick="showTab('videos')">Vídeos</button>
-    <button onclick="showTab('contato')">Contato</button>
-  </nav>
-
-  <section id="inicio" class="tab-content active">
-    <h2>Bem-vindo ao Mundo Manual!</h2>
-
-    <div class="intro">
-      <p>O <b>Mundo Manual</b> está aqui para mostrar que brincar não precisa de telas! Cada pessoa pode soltar a imaginação e construir brinquedos divertidos com materiais simples do dia a dia.</p>
-    </div>
-
-    <div class="balloons">
-      <div class="balloon"></div>
-      <div class="balloon"></div>
-      <div class="balloon"></div>
-    </div>
-
-    <div class="images-container">
-      <div>
-        <img src="cobra.jpg" alt="Cobrinha de tampinhas">
-        <p><b>Cobrinha de tampinhas:</b> feita com tampinhas de garrafa e barbante, ótima para treinar coordenação motora e criatividade.</p>
-      </div>
-      <div>
-        <img src="pipa.jpg" alt="Pipa artesanal">
-        <p><b>Pipa artesanal:</b> vamos construir e costumizar pipas, mostrando que as brincadeiras antigas ainda divertem.</p>
-      </div>
-      <div>
-        <img src="bilboque.jpg" alt="Bilboquê">
-        <p><b>Bilboquê:</b> podemos transformar um pedaço de garrafa em um bilboquê super atrativo!</p>
-      </div>
-    </div>
-
-    <div class="intro">
-      <p>Com nossas ideias, você vai aprender a criar brinquedos que não só divertem, mas também desenvolvem <b>coordenação motora</b>, <b>criatividade</b>, <b>paciência</b> e <b>trabalho em equipe</b>. E o melhor: cuidando do nosso planeta com o uso de materiais recicláveis!</p>
-    </div>
-
-    <div class="benefits">
-      <h2>Por que brincar é importante?</h2>
-      <div class="benefits-grid">
-        <div class="benefit-card"><span>🖐️</span> Melhora a coordenação motora</div>
-        <div class="benefit-card"><span>🎨</span> Estimula a criatividade</div>
-        <div class="benefit-card"><span>👫</span> Incentiva brincadeiras em grupo</div>
-        <div class="benefit-card"><span>🌍</span> Ajuda o meio ambiente com reciclagem</div>
-        <div class="benefit-card"><span>💡</span> Desenvolve foco e concentração</div>
-        <div class="benefit-card"><span>😊</span> Faz bem para o corpo e para a mente</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="quem" class="tab-content">
-    <h2>Quem Somos?</h2>
-    <div class="intro">
-      <p>O <b>Mundo Manual</b> nasceu com o propósito de reconectar você com diversas brincadeiras criativas. Nosso objetivo é mostrar que diversão ainda existe sem o uso de telas!</p>
-    </div>
-
-    <div style="text-align:center;">
-      <video width="70%" controls>
-        <source src="mminicio.mp4" type="video/mp4">
-        Seu navegador não suporta o formato de vídeo.
-      </video>
-    </div>
-  </section>
-
-  <section id="videos" class="tab-content">
-    <h2>Aprenda a fazer seus brinquedos agora!</h2>
-    <div class="videos-container">
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/watch?v=tTVKCb1ywDk" frameborder="0"></iframe>
-        <div class="passo">
-          <b>Passo a Passo:</b><br>
-          Passo 1: Faça um furo no meio das tampinhas <br>
-          Passo 2: Passe o barbante por todas as tampinhas, uma atrás da outra <br>
-          Passo 3: Dê um nó, para não soltar <br>
-          Passo 4: Decore como quiser e se divirta!
-        </div>
-      </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/watch?v=_9XTBrHPOr4" frameborder="0"></iframe>
-        <div class="passo">
-          <b>Passo a Passo:</b><br>
-          Passo 1: Corte a parte de cima da garrafa (com o bico) <br>
-          Passo 2: Faça um furo na tampinha <br>
-          Passo 3: Amarre a outra ponta do barbante no gargalo da garrafa
-        </div>
-      </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/watch?v=2H95_meLUqs" frameborder="0"></iframe>
-        <div class="passo">
-          <b>Passo a Passo:</b><br>
-          Passo 1: Dobre o papel formando um triângulo (na diagonal) <br>
-          Passo 2: Dobre as duas pontas <br>
-          Passo 3: Dobre novamente e puxe uma das pontas para cima (formando o pescoço) <br>
-          Passo 4: Dobre a pontinha do ''pescoço'' para baixo <br>
-          Passo 5: Ajuste os lados e assim forme seu origame de cisne!
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contato" class="tab-content">
-    <h2>Entre em Contato</h2>
-    <p style="text-align:center; font-size:18px;">
-      Caso tenha sugestões ou queira compartilhar uma construção de brinquedo feita por você, 
-      mande para o nosso e-mail. Vamos adorar ver suas criações!
-    </p>
-    <p style="text-align:center; font-size:20px; font-weight:bold;">
-      <a href="mailto:ouniversomundomanual@gmail.com">ouniversomundomanual@gmail.com</a>
-    </p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Mundo Manual - De brincalhões, para brincalhões!</p>
-  </footer>
-
-  <script>
-    function showTab(tabId) {
-      document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.remove('active');
-      });
-      document.getElementById(tabId).classList.add('active');
-    }
-  </script>
-</body>
-</html>
