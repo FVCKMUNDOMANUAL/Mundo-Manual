@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif; /* fonte moderna */
+      font-family: 'Poppins', sans-serif;
       background: url('https://www.transparenttextures.com/patterns/confetti.png');
       color: #333;
     }
@@ -118,7 +118,7 @@
     }
 
     .images-container img {
-      width: 70%; /* reduzido ainda mais para a sua última solicitação */
+      width: 70%;
       border-radius: 15px;
       margin-bottom: 12px;
     }
@@ -218,6 +218,39 @@
     footer p {
       margin: 5px 0;
     }
+
+    /* Balões animados para o início */
+    .balloons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .balloon {
+      width: 40px;
+      height: 50px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #ff9a9e, #fad0c4);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .balloon:nth-child(2) {
+      background: radial-gradient(circle at 30% 30%, #a1c4fd, #c2e9fb);
+      animation-delay: 1s;
+    }
+
+    .balloon:nth-child(3) {
+      background: radial-gradient(circle at 30% 30%, #fbc2eb, #a6c1ee);
+      animation-delay: 2s;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+
   </style>
 </head>
 <body>
@@ -229,6 +262,7 @@
 
   <nav>
     <button onclick="showTab('inicio')">Início</button>
+    <button onclick="showTab('quem')">Quem Somos?</button>
     <button onclick="showTab('videos')">Vídeos</button>
     <button onclick="showTab('contato')">Contato</button>
   </nav>
@@ -236,22 +270,21 @@
   <!-- Início -->
   <section id="inicio" class="tab-content active">
     <h2>Bem-vindo ao Mundo Manual!</h2>
+
     <div class="intro">
-      <p>O <b>Mundo Manual</b> está aqui para mostrar para você que brincar não precisa de telas, aplicativos ou eletrônicos. Aqui, cada pessoa pode soltar a imaginação e construir brinquedos divertidos com materiais simples do dia a dia.</p>
+      <p>O <b>Mundo Manual</b> está aqui para mostrar que brincar não precisa de telas! Cada pessoa pode soltar a imaginação e construir brinquedos divertidos com materiais simples do dia a dia.</p>
     </div>
 
-    <!-- Adicionando o vídeo aqui -->
-    <div class="intro">
-      <video width="100%" controls>
-        <source src="mminicio.mp4" type="video/mp4">
-        Seu navegador não suporta o formato de vídeo.
-      </video>
+    <div class="balloons">
+      <div class="balloon"></div>
+      <div class="balloon"></div>
+      <div class="balloon"></div>
     </div>
 
     <div class="images-container">
       <div>
         <img src="cobra.jpg" alt="Cobrinha de tampinhas">
-        <p><b>Cobrinha de tampinhas:</b> feita com tampinhas de garrafa e barbante, ótima para treinar coordenação motora e a criatividade.</p>
+        <p><b>Cobrinha de tampinhas:</b> feita com tampinhas de garrafa e barbante, ótima para treinar coordenação motora e criatividade.</p>
       </div>
       <div>
         <img src="pipa.jpg" alt="Pipa artesanal">
@@ -277,6 +310,21 @@
         <div class="benefit-card"><span>💡</span> Desenvolve foco e concentração</div>
         <div class="benefit-card"><span>😊</span> Faz bem para o corpo e para a mente</div>
       </div>
+    </div>
+  </section>
+
+  <!-- Quem Somos -->
+  <section id="quem" class="tab-content">
+    <h2>Quem Somos?</h2>
+    <div class="intro">
+      <p>O <b>Mundo Manual</b> nasceu com o propósito de reconectar as crianças e famílias com a essência das brincadeiras criativas. Nosso objetivo é mostrar que diversão e aprendizado podem andar juntos — e sem depender das telas!</p>
+    </div>
+
+    <div style="text-align:center;">
+      <video width="70%" controls>
+        <source src="mminicio.mp4" type="video/mp4">
+        Seu navegador não suporta o formato de vídeo.
+      </video>
     </div>
   </section>
 
