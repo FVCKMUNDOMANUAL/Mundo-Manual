@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mundo Manual</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Quicksand:wght@400;600&display=swap');
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -81,16 +83,24 @@
       margin-bottom: 20px;
     }
 
+    /* caixas de texto atualizadas */
     .intro {
       text-align: center;
+      font-family: 'Quicksand', sans-serif;
       font-size: 20px;
       margin-bottom: 30px;
       line-height: 1.6;
-      background: #fff8e1;
+      background: linear-gradient(145deg, #fef9e7, #fceabb);
       padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      border: 2px dashed #fda085;
+      border-radius: 18px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1), 0 0 10px rgba(255, 255, 200, 0.4);
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .intro:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2), 0 0 15px rgba(255, 255, 150, 0.7);
     }
 
     .images-container {
@@ -219,7 +229,6 @@
       margin: 5px 0;
     }
 
-    /* Balões animados para o início */
     .balloons {
       display: flex;
       justify-content: center;
@@ -267,7 +276,6 @@
     <button onclick="showTab('contato')">Contato</button>
   </nav>
 
-  <!-- Início -->
   <section id="inicio" class="tab-content active">
     <h2>Bem-vindo ao Mundo Manual!</h2>
 
@@ -313,11 +321,10 @@
     </div>
   </section>
 
-  <!-- Quem Somos -->
   <section id="quem" class="tab-content">
     <h2>Quem Somos?</h2>
     <div class="intro">
-      <p>O <b>Mundo Manual!</b> nasceu com o propósito de reconectar as pessoas com brincadeiras criativas. Nosso objetivo é mostrar que não precisamos apenas de eletrônicos para nos divertir!</p>
+      <p>O <b>Mundo Manual</b> nasceu com o propósito de reconectar as crianças e famílias com a essência das brincadeiras criativas. Nosso objetivo é mostrar que diversão e aprendizado podem andar juntos — e sem depender das telas!</p>
     </div>
 
     <div style="text-align:center;">
@@ -328,7 +335,6 @@
     </div>
   </section>
 
-  <!-- Vídeos -->
   <section id="videos" class="tab-content">
     <h2>Aprenda a fazer seus brinquedos agora!</h2>
     <div class="videos-container">
@@ -365,7 +371,6 @@
     </div>
   </section>
 
-  <!-- Contato -->
   <section id="contato" class="tab-content">
     <h2>Entre em Contato</h2>
     <p style="text-align:center; font-size:18px;">
